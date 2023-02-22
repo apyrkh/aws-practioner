@@ -1,4 +1,5 @@
 .idea
+.serverless
 coverage
 dist
 node_modules

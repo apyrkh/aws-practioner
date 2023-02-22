@@ -1,11 +1,5 @@
 # AWS practitioner shop
 
-Link to CloudFront website:
-https://d326h9nreps3lf.cloudfront.net
-
-Link to S3 bucket:
-http://apyrkh-aws-practitioner.s3-website-eu-west-1.amazonaws.com
-
 
 ## Available Scripts
 

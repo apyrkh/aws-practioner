@@ -9,8 +9,8 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/" underline="hover">
-        AWS practitioner Store
+      <Link color="inherit" href="/" underline="hover">
+        CloudX Courses Store
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}

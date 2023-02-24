@@ -33,7 +33,7 @@ export default function Header() {
             underline="none"
             to="/"
           >
-            AWS practitioner Store
+            CloudX Courses Store
           </Link>
         </Typography>
 

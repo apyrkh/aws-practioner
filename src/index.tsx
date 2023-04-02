@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { theme } from "~/theme";
+import axios from "axios";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -18,6 +19,29 @@ if (import.meta.env.DEV) {
   const { worker } = await import("./mocks/browser");
   worker.start({ onUnhandledRequest: "bypass" });
 }
+
+// preset token for demo purpose only
+window.localStorage.setItem(
+  "authorization_token",
+  import.meta.env.VITE_DEMO_AUTHORIZATION_TOKEN
+);
+
+axios.interceptors.response.use(
+  (response) => {
+    return response;
+  },
+  function (error) {
+    if (error?.response?.status === 401) {
+      alert(error.response.data?.message || "Unauthorized");
+    }
+
+    if (error?.response?.status === 403) {
+      alert(error.response.data?.message || "Forbidden");
+    }
+
+    return Promise.reject(error?.response ?? error);
+  }
+);
 
 const container = document.getElementById("app");
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion

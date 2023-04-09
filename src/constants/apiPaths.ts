@@ -7,7 +7,7 @@ const API_PATHS = {
   product: `${PRODUCT_SERVICE_URL}/${STAGE}`,
   order: "https://.execute-api.eu-west-1.amazonaws.com/dev",
   bff: "https://.execute-api.eu-west-1.amazonaws.com/dev",
-  cart: "https://.execute-api.eu-west-1.amazonaws.com/dev",
+  cart: "https://o0xk08yi06.execute-api.eu-west-1.amazonaws.com/dev",
 };
 
 export default API_PATHS;
